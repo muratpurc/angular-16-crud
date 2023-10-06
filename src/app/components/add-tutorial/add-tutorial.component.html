@@ -1,0 +1,46 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            [ngClass]="{'form-control': true, 'is-invalid': titleError}"
+            id="title"
+            required
+            [(ngModel)]="tutorial.title"
+            (keydown.enter)="saveTutorial()"
+            name="title"
+            aria-describedby="validationTitleFeedback"
+          />
+          <div *ngIf="titleError" id="validationTitleFeedback" class="invalid-feedback">
+            Please provide a title.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            [ngClass]="{'form-control': true, 'is-invalid': descriptionError}"
+            id="description"
+            required
+            [(ngModel)]="tutorial.description"
+            (keydown.enter)="saveTutorial()"
+            name="description"
+            aria-describedby="validationDescriptionFeedback"
+          />
+          <div *ngIf="titleError" id="validationDescriptionFeedback" class="invalid-feedback">
+            Please provide a description.
+          </div>
+        </div>
+  
+        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Tutorial was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      </div>
+    </div>
+  </div>
+  
