@@ -14,7 +14,7 @@ Navigate to the `rest-api` folder using a command line.
 cd ./rest-api
 ````
 
-Optional - install the required node packages. Installation is only required once.
+Install the required node packages. The installation is only required once.
 
 ````sh
 npm install
@@ -28,9 +28,9 @@ npm run dev
 
 ## Notes
 
-The server works with locally stored JSON files, so it needs write permissions in the `db` folder and/or for the file `db/tutorials.json`.
+The server works with locally stored JSON files, so it needs write permissions for the `db` folder and/or for the file `db/tutorials.json`.
 
-There is an example data source for tutorials in `db/tutorials.json.example`. Copy this file `db/tutorials.json` if you want to start with somer predefined tutorial records.
+There is an example data source for tutorials in `db/tutorials.json.example`. Copy this file to `db/tutorials.json` if you want to start with some predefined tutorial records.
 
 ````sh
 cp ./db/tutorials.json.example ./db/tutorials.json
